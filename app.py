@@ -83,16 +83,8 @@ async def submit_form(
 
         return templates.TemplateResponse("index.html",{
             "request":request,
-            "name":name,
-            "overall_rating":overall_rating,
-            "shooting":shooting,
-            "dribbling":dribbling,
-            "defending":defending,
-            "pace":pace,
-            "passing":passing,
-            "position":position,
-            "currency":currency,
-            "estimated_value":dollar_value if currency=="Dollar" else euro_value.item(),
+            "name_output":name,
+            "estimated_value":f'{dollar_value:.2f}' if currency=="Dollar" else f'{euro_value.item():.2f}',
             "error":None
         })
     except Exception as e:

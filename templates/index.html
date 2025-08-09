@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Soccer Transfer Market</title>
   <link rel="stylesheet" href="/static/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Soccer Transfer Market</h1>
@@ -38,6 +39,7 @@
 
     <label for="currency">Which currency?</label>
     <select name="currency" id="currency">
+        <option value="None">None</option>
         <option value="Euro">Euro</option>
         <option value="Dollar">Dollar</option>
     </select> <br>
@@ -49,8 +51,11 @@
   <p style="color: red;">Error: {{ error }}</p>
   {% endif %}
 
+  {% if name_output %}
+  <h2>{{ name_output }}'s Estimated Market Value</h2>
+  {% endif %}
+
   {% if estimated_value %}
-  <h2>Estimated Transfer Market Value</h2>
   <h3>{{ estimated_value }}</h3>
   <br/>
   {% endif %}
