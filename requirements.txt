@@ -4,3 +4,4 @@ numpy
 pandas
 joblib
 onnxruntime
+jinja2
