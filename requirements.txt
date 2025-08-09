@@ -1,7 +1,6 @@
 fastapi
 uvicorn
 torch
-re
 numpy
 pandas
 joblib
