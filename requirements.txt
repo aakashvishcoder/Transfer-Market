@@ -5,3 +5,4 @@ pandas
 joblib
 onnxruntime
 jinja2
+scikit-learn
