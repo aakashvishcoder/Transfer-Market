@@ -12,6 +12,7 @@
     }
   ],
   "env": {
-    "PORT": "8000"
+    "PORT": "8000",
+    "PYTHON_PIP_EXTRA_INDEX_URL": "https://download.pytorch.org/whl/cpu"
   }
 }
