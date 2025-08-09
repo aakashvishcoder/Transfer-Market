@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Soccer Transfer Market</title>
+  <link rel="stylesheet" href="" />
+</head>
+<body>
+  <h1>Soccer Transfer Market</h1>
+
+  <form method="POST">
+    <label>Enter the player's name:</label><br/>
+    <input type="text" name="name" value="{{ name }}" required /><br/><br/>
+
+    <label>Enter the player's age:</label><br/>
+    <input type="text" name="age" value="{{ age }}" required /><br/><br/>
+
+    <label>Enter the player's overall rating:</label><br/>
+    <input type="text" name="overall_rating" value="{{ overall_rating }}" required /><br/><br/>
+
+    <label>Enter the player's shooting rating:</label><br/>
+    <input type="text" name="shooting" value="{{ shooting }}" required /><br/><br/>
+
+    <label>Enter the player's dribbling rating:</label><br/>
+    <input type="text" name="dribbling" value="{{ dribbling }}" required /><br/><br/>
+
+    <label>Enter the player's defending rating:</label><br/>
+    <input type="text" name="defending" value="{{ defending }}" required /><br/><br/>
+
+    <label>Enter the player's pace rating:</label><br/>
+    <input type="text" name="pace" value="{{ pace }}" required /><br/><br/>
+    
+    <label>Enter the player's passing rating:</label><br/>
+    <input type="text" name="passing" value="{{ passing }}" required /><br/><br/>
+
+    <label>Enter the player's position rating:</label><br/>
+    <input type="text" name="position" value="{{ position }}" required /><br/><br/>
+
+    <label for="currency">Which currency?</label>
+    <select name="currency" id="currency">
+        <option value="Euro">Euro</option>
+        <option value="Dollar">Dollar</option>
+    </select>
+
+    <button type="submit">Get Estimated Transfer Value</button>
+  </form>
+
+  {% if error %}
+  <p style="color: red;">Error: {{ error }}</p>
+  {% endif %}
+
+  {% if estimated_value %}
+  <h2>Estimated Transfer Market Value</h2>
+  <h3>{{ estimated_value }}</h3>
+  <br/>
+  {% endif %}
+
+</body>
+</html>
